@@ -5,6 +5,7 @@ class Item(models.Model):
     name = models.CharField(max_length=50)
     done = models.BooleanField(default=False)
 
+# Define the services offered by the hair salon
 class Service(models.Model):
     name = models.CharField(max_length=100)
     duration = models.IntegerField(help_text='Duration in minutes')
@@ -13,6 +14,7 @@ class Service(models.Model):
     def __str__(self):
         return self.name
 
+# Define the appointment details
 class Appointment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
