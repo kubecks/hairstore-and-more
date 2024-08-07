@@ -15,9 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from hairstore.views import get_hairstore_homepage
+from django.urls import include, path
+
+# Include URLs from the appointments app
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_hairstore_homepage, name = 'get_hairstore_homepage')
+    path('', include('appointments.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),  # for login and logout
 ]
