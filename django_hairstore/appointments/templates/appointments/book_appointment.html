@@ -1,12 +1,16 @@
-{% extends 'base_generic.html' %}
+<!-- appointments/templates/appointments/book_appointment.html -->
+
+{% extends 'appointments/base_generic.html' %}
+
+{% block title %}Book Appointment{% endblock %}
 
 {% block content %}
-  <h1>Book an Appointment</h1>
-  <form method="post">
+<h1>Book Your Appointment</h1>
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Book</button>
-  </form>
+    <button type="submit">Submit</button>
+</form>
 {% endblock %}
 
 

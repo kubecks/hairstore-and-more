@@ -1,6 +1,10 @@
-{% extends 'base_generic.html' %}
+<!-- appointments/templates/appointments/homepage.html -->
+
+{% extends 'appointments/base_generic.html' %}
+
+{% block title %}Homepage{% endblock %}
 
 {% block content %}
-  <h1>Welcome to the Hair Appointment Booking System</h1>
-  <a href="{% url 'book_appointment' %}">Book an Appointment</a>
+<h1>Welcome to the Hair Appointment Booking System</h1>
+<a href="{% url 'book_appointment' %}">Book an Appointment</a>
 {% endblock %}
