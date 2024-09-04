@@ -1,3 +1,5 @@
+# hairstore/models.py
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -16,7 +18,7 @@ class Service(models.Model):
 
 # Define the appointment details
 class Appointment(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='hairstore_appointments')
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
     date = models.DateTimeField()
     notes = models.TextField(blank=True, null=True)
