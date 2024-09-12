@@ -1,4 +1,5 @@
 # appointments/views.py
+
 from django.shortcuts import render, redirect
 from .forms import AppointmentForm
 from django.contrib.auth.decorators import login_required
@@ -7,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 def get_homepage(request):
     return render(request, 'appointments/homepage.html')
 
-# Handle appointment booking
+# Handle appointment booking - requires login
 @login_required
 def book_appointment(request):
     if request.method == 'POST':

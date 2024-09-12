@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the Hair Salon</h1>
         <nav>
+            <h1>Welcome to the Hair Appointment Booking System</h1>
             <a href="{% url 'homepage' %}">Home</a>
             <a href="{% url 'book_appointment' %}">Book Appointment</a>
         </nav>
@@ -18,7 +18,6 @@
 
     <main>
         {% block content %}
-        <!-- Content from child templates will go here -->
         {% endblock %}
     </main>
 
