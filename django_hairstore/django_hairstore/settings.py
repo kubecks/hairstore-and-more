@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+# django_hairstore/settings.py
+
 from pathlib import Path
 
 LOGIN_REDIRECT_URL = 'homepage'  # Redirect to homepage after login
