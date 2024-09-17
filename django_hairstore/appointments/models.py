@@ -1,15 +1,24 @@
-# appointments/models.py
+# django_hairstore/appointments/models.py
 
 from django.db import models
 from django.contrib.auth.models import User
 
-class Appointment(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='appointment_appointments')
-    date = models.DateField()
-    time = models.TimeField()
-    description = models.TextField()
-    service = models.CharField(max_length=100)  
-    notes = models.TextField(blank=True)  
-    
+# Define the services offered by the hair salon
+class Service(models.Model):
+    name = models.CharField(max_length=100)
+    duration = models.IntegerField(help_text='Duration in minutes')
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+
     def __str__(self):
-        return f"Appointment for {self.user.username} on {self.date} at {self.time}"
+        return self.name
+
+# Define the appointment details
+class Appointment(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+    date = models.DateTimeField()
+    notes = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.service.name} on {self.date}"
+
