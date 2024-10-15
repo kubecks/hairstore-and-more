@@ -1,9 +1,11 @@
 <!-- appointments/templates/appointments/book_appointment.html -->
+{% extends 'appointments/base_generic.html' %}
+
 {% block content %}
-  <h2>Book an Appointment</h2>
-  <form method="post">
+<h2>Book an Appointment</h2>
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Submit</button>
-  </form>
+</form>
 {% endblock %}

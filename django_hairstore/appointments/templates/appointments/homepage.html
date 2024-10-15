@@ -2,8 +2,12 @@
 
 {% extends 'appointments/base_generic.html' %}
 
-{% block title %}Homepage{% endblock %}
-
 {% block content %}
+<div class="hero">
+    <h1>Welcome to Our Hair Salon</h1>
+    <p>Experience luxury hair care and styling</p>
+    <button class="cta-button" onclick="window.location.href='{% url 'book_appointment' %}'">Book an Appointment</button>
+</div>
+
 
 {% endblock %}
