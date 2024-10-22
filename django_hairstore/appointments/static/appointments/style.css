@@ -142,6 +142,51 @@ footer a:hover {
     color: #d3d3d3;
 }
 
+
+/* FAQ Styles */
+.faq-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.faq-title {
+    text-align: center;
+    color: #4b0082;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.faq-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-item h3 {
+    color: #4b0082;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
@@ -173,5 +218,4 @@ footer a:hover {
     header nav a {
         margin: 5px 10px 5px 0;
     }
-
 }
