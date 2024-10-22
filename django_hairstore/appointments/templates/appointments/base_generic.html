@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'appointments/style.css' %}">
 </head>
 <body>
+
     <header>
         <nav>
             <div class="logo">
@@ -24,7 +25,6 @@
                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
                     </a>
-                    
                 {% else %}
                     <a href="{% url 'login' %}">Login</a>
                     <a href="{% url 'signup' %}">Sign Up</a>
