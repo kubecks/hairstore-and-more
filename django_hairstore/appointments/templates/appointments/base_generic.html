@@ -18,6 +18,7 @@
             <div class="nav-links">
                 <a href="{% url 'homepage' %}">Home</a>
                 <a href="{% url 'book_appointment' %}">Book Appointment</a>
+                <a href="{% url 'faq' %}">FAQ</a>  <!-- Add this line -->
                 {% if user.is_authenticated %}
                     <form id="logout-form" action="{% url 'logout' %}" method="POST" style="display: none;">
                         {% csrf_token %}
