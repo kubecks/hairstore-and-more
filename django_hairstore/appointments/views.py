@@ -40,3 +40,7 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
+
+# FAQ view
+def faq_view(request):
+    return render(request, 'appointments/faq.html')
